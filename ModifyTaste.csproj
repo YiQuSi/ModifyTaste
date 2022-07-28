@@ -10,15 +10,15 @@
 
   <ItemGroup>
     <Compile Remove="ModifyTaste_Console\**" />
+    <Compile Remove="test\**" />
     <EmbeddedResource Remove="ModifyTaste_Console\**" />
+    <EmbeddedResource Remove="test\**" />
     <None Remove="ModifyTaste_Console\**" />
+    <None Remove="test\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Function.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="MiniExcel" Version="1.26.5" />
     <PackageReference Include="NPOI" Version="2.5.6" />
   </ItemGroup>
 
