@@ -1,4 +1,4 @@
-using ModifyTaste_Scape;
+using ModifyTaste;
 
 namespace ModifyTaste
 {
@@ -8,13 +8,14 @@ namespace ModifyTaste
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        // TODO: 命令行传入参数填充
+        static void Main(string[] args)
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
             // TODO: 多实例禁止
+            Application.Run(new MainForm(args));
         }
     }
 }

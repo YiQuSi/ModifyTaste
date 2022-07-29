@@ -67,5 +67,19 @@ namespace ModifyTaste
             }
             return;
         }
+
+        public static void SendMessage(string path, string type, string id)
+        {
+            try
+            {
+                File.WriteAllText(Path.GetTempPath() + @"TetraProject\Message.txt",
+                    type + ":'" + id + "','ModifyTaste','" + Path.GetFullPath(path) + "'");
+            }
+            catch (ArgumentException)
+            {
+                //Console.WriteLine("路径参数不合法！");
+                return;
+            }
+        }
     }
 }
